@@ -203,7 +203,7 @@ window.onload = function () {
 
   let joystick = new Joystick({
     onMove: function (forward, turn,z) {
-      // console.log(321313132, forward, turn);
+      console.log(321313132, forward, turn);
       // const { top, left } = offset(this._options.container);
       // const { x, y } = this._events.startXY;
 
@@ -217,6 +217,7 @@ window.onload = function () {
       // console.log("rayRes", rayRes);
       if (rayRes) {
         const { position, lookat, mesh } = rayRes;
+        console.log(position,lookat,mesh )
         // 点击地面移动
         console.log(mesh.name, vr._hallPlaneName, "这是名称");
         vr._controls.saveState();

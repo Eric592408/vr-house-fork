@@ -290,6 +290,7 @@ export class VRHall {
   viewItem(id) {
     const item = this._itemsData.find((d) => d.id === id);
     if (item) {
+      console.log(item.view, item.position)
       this.moveTo(item.view, item.position);
     } else {
       console.error("id不存在", id);

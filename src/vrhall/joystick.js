@@ -71,7 +71,6 @@ export default class JoyStick {
 		let left = mouse.x - this.offset.x
 		let top = mouse.y - this.offset.y
 
-    console.log(mouse,this.offset,'12321321321312312312')
 
 		const sqMag = left * left + top * top
 
@@ -88,7 +87,7 @@ export default class JoyStick {
 		
 		const forward = -(top - this.origin.top + this.domElement.clientHeight / 2) / this.maxRadius
 		const turn = (left - this.origin.left + this.domElement.clientWidth / 2) / this.maxRadius
-    // console.log(forward,turn)
+    console.log(forward,turn)
     if(this.onMove) {
       this.onMove(forward, turn,mouse.z)
     }
